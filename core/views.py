@@ -31,3 +31,7 @@ def test(request):
 @csrf_exempt
 def error(request):
     return render(request, 'errors/pc.html')
+
+@csrf_exempt
+def result(request):
+    return render(request, 'result/result.html')
