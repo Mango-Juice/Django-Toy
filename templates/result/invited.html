@@ -1,4 +1,11 @@
 {% extends 'result/base.html' %}
 {% block content %}
-응애
+<br/>
+{여기에 제목이 들어감}<br/>
+<div class="desc">불가능한 시간을 골라주세요. </div>
+<form style="text-align: center; margin-top: 15px;">
+    {% include 'components/picker.html' %}
+    <div id = "plus">➕</div>
+    <input type="submit" class = "btn" value="제출하기"/>
+</form>
 {% endblock %}

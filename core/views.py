@@ -12,12 +12,12 @@ def get_post(request):
         tmp = list(Suggestion.objects.filter(id=num).values())
 
         if len(tmp) == 0:
-            return render(request, 'errors/unknown.html')
+            # return render(request, 'errors/unknown.html')
+            return render(request, 'result/invited.html')
 
         context = {
             "id": num,
             "title": tmp[0]["title"],
-            "describe": tmp[0]["describe"],
           }
 
     return render(request, 'result/invited.html', context)
@@ -31,3 +31,23 @@ def test(request):
 @csrf_exempt
 def error(request):
     return render(request, 'errors/pc.html')
+
+
+@csrf_exempt
+def result(request):
+    context = {}
+
+    if request.method == 'GET':
+        num = request.GET['id']
+        tmp = list(Suggestion.objects.filter(id=num).values())
+
+        if len(tmp) == 0:
+            # return render(request, 'errors/unknown.html')
+            return render(request, 'result/result.html')
+
+        context = {
+            "id": num,
+            "title": tmp[0]["title"],
+          }
+
+    return render(request, 'result/result.html', context)

@@ -1,4 +1,13 @@
 {% extends 'result/base.html' %}
 {% block content %}
-응애
+<form>
+    <br/>
+    <label style="font-weight:bold">▶ 약속 제목 (50자 이내)</label><br/>
+    <input type="text" name="title" class="input"/><br/><br/>
+    <label style="font-weight:bold">▶ 약속 내용 (선택)</label><br/>
+    <textarea name="desc" class="input" style="height: 50vh"></textarea><br/><br/>
+    <div align="center">
+        <input type="submit" class = "btn" value="링크 만들기"/>
+    </div>
+</form>
 {% endblock %}

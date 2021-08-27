@@ -1,3 +1,8 @@
+textarea  { 
+   font-family: "Noto Sans KR", sans-serif !important;
+   resize: none !important;
+}
+
 .title {
   font-weight: bold;
   font-size: 15vw;
@@ -51,4 +56,28 @@
   border-radius: 20px 20px 20px 0px;
   text-decoration: none;
   padding: 10px 15px;
+}
+
+.input {
+  margin-top: 5px;
+  width: 95%;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 3px;
+  height: 30px;
+}
+
+.component {
+  margin: 10px;
+  padding: 5px;
+  border: solid black;
+  border-width: 2px;
+  border-radius: 5px;
+  font-size: 5vw;
+}
+
+#plus {
+  font-size: 7vw;
+  cursor: pointer;
+  margin-bottom: 2vh;
 }
