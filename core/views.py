@@ -26,3 +26,7 @@ def get_post(request):
 @csrf_exempt
 def test(request):
     return render(request, 'inviting.html')
+
+@csrf_exempt
+def error(request):
+    return render(request, 'error.html')

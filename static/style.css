@@ -1,0 +1,58 @@
+body {
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 15vw;
+}
+
+.desc {
+  font-size: 7vw;
+}
+
+.btn {
+  font-size: 5vw;
+  background-color : black;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 2vw 2vh 2vw 2vh;
+}
+
+.anim {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translate(0, 5vh);
+}
+
+.anim.show {
+  opacity: 1;
+  transform: none;
+}
+
+.kakao_bg {
+  background-color: #B2C7DA;
+  padding: 50px 20px 0px 20px;
+  border-radius: 20px;
+}
+
+.chatting {
+  display: inline-block;
+  font-size: 5vw;
+  margin-bottom: 60px;
+}
+
+.chatting-me {
+  background-color : #FFEB34;
+  border-radius: 20px 0px 20px 20px;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.chatting-you {
+  background-color : #FFFFFF;
+  border-radius: 20px 20px 20px 0px;
+  text-decoration: none;
+  padding: 10px 15px;
+}

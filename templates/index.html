@@ -1,11 +1,49 @@
+<!DOCTYPE html>
 {% load static %}
 
 <html>
     <head>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     </head>
     <body>
-        Hi
+        <!-- Main Title -->
+        <div class="title" style="margin-top: 30vh">😲</div>
+        <div class="title">아직도</div>
+        <div class="desc" style="margin-bottom: 4vh;">힘들게 시간 약속 잡으시나요?</div>
+        <a class="btn" href="{% url 'core' %}">편하게 약속 잡으러 가기 ▶</a>
+        
+        <!-- Main Desc -->
+        <div class="desc" style="margin-top: 40vh; margin-bottom: 3vh;">혹시 이렇게 약속 잡으세요?</div>
+        <div class="kakao_bg">
+            <div style="text-align: left;"><div class="anim chatting chatting-you">우리 언제 만날까?</div></div>
+            <div style="text-align: right;"><div class="anim chatting chatting-me">너는 언제가 좋은데?</div></div>
+            <div style="text-align: left;"><div class="anim chatting chatting-you">나는 언제든 상관 없어!</div></div>
+            <div style="text-align: right;"><div class="anim chatting chatting-me">나도 상관 없는데...</div></div>
+            <div style="text-align: right;"><div class="anim chatting chatting-me">토요일 1시 어때?</div></div>
+            <div style="text-align: left;"><div class="anim chatting chatting-you">아 나 그때 선약이 있어서...</div></div>
+            <div style="text-align: right;"><div class="anim chatting chatting-me">그러면 일요일은? 일요일 낮에 만날까?</div></div>
+            <div style="text-align: left;"><div class="anim chatting chatting-you">아 맞다! 나 일요일에 가족여행가...</div></div>
+            <div style="text-align: right;"><div class="anim chatting chatting-me">언제든 상관 없다매 😭😭</div></div>
+        </div>
+        
+        <div class="desc" style="margin-top: 20vh; margin-bottom: 3vh;">깔끔하게 링크 하나로 끝내세요!</div>
+        <div class="kakao_bg">
+            <div style="text-align: left;"><div class="anim chatting chatting-you">우리 언제 만날까?</div></div>
+            <div style="text-align: right;"><div class="anim chatting chatting-me" style="color: blue"><ins>https://pytoy-cxkwi...</ins></div></div>
+            <div style="text-align: right;"><div class="anim chatting chatting-me">여기로 들어와</div></div>
+            <div style="text-align: left;"><div class="anim chatting chatting-you">다 체크 했어!</div></div>
+            <div style="text-align: right;"><div class="anim chatting chatting-me">ㅇㅋ 수요일 2시에 만나자</div></div>
+        </div>
+        
+        <div class="desc" style="margin-top: 20vh; margin-bottom: 3vh;">링크 하나로 정하는 약속 시간<br>지금 바로 시작해보세요!</div>
+        <a class="btn" href="{% url 'core' %}">편하게 약속 잡으러 가기 ▶</a>
+        <div style="margin-bottom:30vh">
+            
+        </div>
+        
+        <!-- Script -->
+        <script src="{% static 'script/mobile_checker.js' %}" type="text/javascript"></script>
+        <script src="{% static 'script/animation.js' %}" type="text/javascript"></script>
     </body>
 </html>
