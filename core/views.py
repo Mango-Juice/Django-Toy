@@ -12,7 +12,8 @@ def get_post(request):
         tmp = list(Suggestion.objects.filter(id=num).values())
 
         if len(tmp) == 0:
-            return render(request, 'errors/unknown.html')
+            # return render(request, 'errors/unknown.html')
+            return render(request, 'result/invited.html')
 
         context = {
             "id": num,
