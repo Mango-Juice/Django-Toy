@@ -27,6 +27,7 @@ def get_post(request):
 def test(request):
     return render(request, 'inviting.html')
 
+
 @csrf_exempt
 def error(request):
-    return render(request, 'error.html')
+    return render(request, 'pc.html')
