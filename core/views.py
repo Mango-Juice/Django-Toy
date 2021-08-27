@@ -18,7 +18,6 @@ def get_post(request):
         context = {
             "id": num,
             "title": tmp[0]["title"],
-            "describe": tmp[0]["describe"],
           }
 
     return render(request, 'result/invited.html', context)
@@ -33,6 +32,22 @@ def test(request):
 def error(request):
     return render(request, 'errors/pc.html')
 
+
 @csrf_exempt
 def result(request):
-    return render(request, 'result/result.html')
+    context = {}
+
+    if request.method == 'GET':
+        num = request.GET['id']
+        tmp = list(Suggestion.objects.filter(id=num).values())
+
+        if len(tmp) == 0:
+            # return render(request, 'errors/unknown.html')
+            return render(request, 'result/result.html')
+
+        context = {
+            "id": num,
+            "title": tmp[0]["title"],
+          }
+
+    return render(request, 'result/result.html', context)
