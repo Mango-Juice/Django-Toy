@@ -1,11 +1,9 @@
 {% extends 'result/base.html' %}
 {% block content %}
-<form>
+<form action="{% url 'create' %}" method="POST">
+    {% csrf_token %}
     <br/>
-    <label style="font-weight:bold">▶ 약속 제목 (50자 이내)</label><br/>
-    <input type="text" name="title" class="input"/><br/><br/>
-    <label style="font-weight:bold">▶ 약속 내용 (선택)</label><br/>
-    <textarea name="desc" class="input" style="height: 50vh"></textarea><br/><br/>
+    {{ form.as_p }}
     <div align="center">
         <input type="submit" class = "btn" value="링크 만들기"/>
     </div>
