@@ -1,6 +1,6 @@
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
-from core.models import Suggestion
+from core.models import Suggestion, Answer
 from .forms import PostForm
 
 
@@ -67,4 +67,28 @@ def create(request):
         if form.is_valid():
             data = form.save()
             return render(request, 'result/link.html', {'id': str(data.id)})
+    return redirect('unknown')
+
+
+@csrf_exempt
+def submit(request):
+    if request.method == "POST":
+        num = request.POST.get('id')
+
+        status = ['T'] * 168
+        content = dict(request.POST)
+        dow = list(map(int, content['dow']))
+        start = list(map(int, content['start']))
+        fin = list(map(int, content['fin']))
+
+        for i in range(len(dow)):
+            day = dow[i] * 24
+
+            if fin[i] <= start[i]:
+                continue
+
+            for j in range(day + start[i], day + fin[i]):
+                status[j] = 'F'
+        Answer.objects.create(suggestion=Suggestion.objects.filter(id=num)[0], data=status)
+        return render(request, 'result/result.html', {'id': num})
     return redirect('unknown')

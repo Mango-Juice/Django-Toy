@@ -1,19 +1,33 @@
 {% extends 'result/base.html' %}
 {% block content %}
-<br/>
-{여기에 제목이 들어감}<br/>
-<div class="desc">불가능한 시간을 골라주세요. </div>
-<form style="text-align: center; margin-top: 15px;">
+<!-- Title -->
+<br/><br/>
+{{ title }}<br/>
+<div class="desc">불가능한 시간을 골라주세요. </div><br/>
+
+<!-- Form -->
+<form style="text-align: center; margin-top: 15px;" action="{% url 'submit' %}" method="POST">
+    {% csrf_token %}
+    
+    <!-- Id -->
+    <div style="display: none">
+        <label>id</label>
+        <input type="text" name="id" value="{{ id }}"/>
+    </div>
+    
+    <!-- Pickers -->
     <div id = "component_area">
         {% include 'components/picker.html' %}
     </div>
-    <div id = "plus">➕</div>
+    <div id = "plus">➕</div><br/>
+    
+    <!-- Submit -->
     <input type="submit" class = "btn" value="제출하기"/>
 </form>
 
 <script>
 document.getElementById("plus").addEventListener('click', function () {
-  document.getElementById("component_area").innerHTML += `{% include "components/picker.html" %}`;
+  document.getElementById("component_area").insertAdjacentHTML('beforeend', `{% include "components/picker.html" %}`);
 });
 </script>
 {% endblock %}
