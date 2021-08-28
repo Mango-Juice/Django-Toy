@@ -47,14 +47,35 @@ def result(request):
 
     if request.method == 'GET':
         num = request.GET['id']
-        tmp = list(Suggestion.objects.filter(id=num).values())
+        suggestion = Suggestion.objects.filter(id=num)[0]
+        tmp = list(Answer.objects.filter(suggestion=suggestion).values())
+        days = ["월", "화", "수", "목", "금", "토", "일"]
+        result = [True] * 168
+        content = ''
+        last = False
+        edit = False
 
-        if len(tmp) == 0:
-            return redirect('unknown')
+        for i in tmp:
+            for j, char in enumerate(i['data']):
+                if char == 'F':
+                    result[j] = False
+
+        for idx, val in enumerate(result):
+            if val and not last:
+                content += '👉 {}요일 {}시 ~'.format(days[idx // 24], idx % 24)
+                edit = True
+            elif last and not val:
+                content += ' {}요일 {}시\n'.format(days[idx // 24], idx % 24 + 1)
+                edit = False
+            last = val
+
+        if edit:
+            content += ' {}요일 {}시'.format(days[6], 24)
 
         context = {
-            "id": num,
-            "title": tmp[0]["title"],
+            "title": suggestion.title,
+            "content": content,
+            "count": len(tmp)
           }
 
     return render(request, 'result/result.html', context)
@@ -87,8 +108,10 @@ def submit(request):
             if fin[i] <= start[i]:
                 continue
 
-            for j in range(day + start[i], day + fin[i]):
-                status[j] = 'F'
-        Answer.objects.create(suggestion=Suggestion.objects.filter(id=num)[0], data=status)
-        return render(request, 'result/result.html', {'id': num})
+            for j in range(day + start[i] - 1, day + fin[i] + 1):
+                if 0 <= j < 168:
+                    status[j] = 'F'
+
+        Answer.objects.create(suggestion=Suggestion.objects.filter(id=num)[0], data=''.join(status))
+        return redirect('https://pytoy-cxkwi.run.goorm.io/core/result/?id='+str(num))
     return redirect('unknown')

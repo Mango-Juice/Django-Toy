@@ -1,9 +1,12 @@
 {% extends 'result/base.html' %}
 {% block content %}
-<br/>
-{여기에 제목이 들어감}<br/>
-<div class="desc">약속 가능 시간이에요.</div><br/>
-<div id="result" style="margin: 10px">
-    {여기에 결과들이 들어감}
+<div style="text-align: center;">
+    <br/><br/>
+    <div style="font-size: 5vw;">{{ title }}<br/></div>
+    <div class="desc"> 약속 가능 시간을 확인하세요!</div>
+    <div style="font-size: 4.5vw;">👀 현재까지 {{ count }}명이 참여했어요.<br/></div><br/>
+    <div id="result" class="result component">
+        {{ content|linebreaksbr }}
+    </div>
 </div>
 {% endblock %}
