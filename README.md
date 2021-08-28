@@ -1,6 +1,11 @@
 # Django-Toy
 
-### goormIDE --- GitHub
+## 약속 시간, 아직도 힘들게 정하시나요?
+https://pytoy-cxkwi.run.goorm.io/ 에서 링크 하나로 약속 시간을 정해보세요!
+(서버는 항상 켜져있지 않습니다.)
+
+
+## goormIDE --- GitHub
 ```
 <!-- Commit & Push -->
 git add --all
