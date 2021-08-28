@@ -1,5 +1,7 @@
 {% extends 'result/base.html' %}
 {% block content %}
+<br/><br/>
+<div class="desc" style="font-weight: bold; text-align: center;">약속 내용을 알려주세요.<br/></div>
 <form action="{% url 'create' %}" method="POST">
     {% csrf_token %}
     <br/>

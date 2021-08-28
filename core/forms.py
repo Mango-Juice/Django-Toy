@@ -16,6 +16,6 @@ class PostForm(forms.ModelForm):
             }),
             'describe': forms.Textarea(attrs={
                 'class': 'input',
-                'style': 'height: 50vh'
+                'style': 'height: 40vh'
             }),
         }
