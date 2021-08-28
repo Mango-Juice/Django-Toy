@@ -9,5 +9,6 @@ urlpatterns = [
     path('pc/',  core.views.pc, name='pc'),
     path('unknown/',  core.views.unknown, name='unknown'),
     path('create/',  core.views.create, name='create'),
+    path('submit/',  core.views.submit, name='submit'),
 
 ]
