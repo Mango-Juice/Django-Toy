@@ -13,8 +13,7 @@ def get_post(request):
         tmp = list(Suggestion.objects.filter(id=num).values())
 
         if len(tmp) == 0:
-            # return redirect('unknown')
-            return render(request, 'result/invited.html')
+            return redirect('unknown')
 
         context = {
             "id": num,
@@ -51,8 +50,7 @@ def result(request):
         tmp = list(Suggestion.objects.filter(id=num).values())
 
         if len(tmp) == 0:
-            # return redirect('unknown')
-            return render(request, 'result/result.html')
+            return redirect('unknown')
 
         context = {
             "id": num,

@@ -4,8 +4,16 @@
 {여기에 제목이 들어감}<br/>
 <div class="desc">불가능한 시간을 골라주세요. </div>
 <form style="text-align: center; margin-top: 15px;">
-    {% include 'components/picker.html' %}
+    <div id = "component_area">
+        {% include 'components/picker.html' %}
+    </div>
     <div id = "plus">➕</div>
     <input type="submit" class = "btn" value="제출하기"/>
 </form>
+
+<script>
+document.getElementById("plus").addEventListener('click', function () {
+  document.getElementById("component_area").innerHTML += `{% include "components/picker.html" %}`;
+});
+</script>
 {% endblock %}
