@@ -1,27 +1,11 @@
 # Django-Toy
 
 ## 약속 시간, 아직도 힘들게 정하시나요?
-https://pytoy-cxkwi.run.goorm.io/ 에서 링크 하나로 약속 시간을 정해보세요!
-(서버는 항상 켜져있지 않습니다.)
+https://pytoy-cxkwi.run.goorm.io 에서 링크 하나로 약속 시간을 정해보세요!
+(서버는 항상 켜져있지 않습니다.)    
+(해당 프로젝트는 단순 연습용이며, 실제 약속 시간을 정하는 용도로 사용하지 마세요 - [Issue #12](https://github.com/Mango-Juice/Django-Toy/issues/12) 참고)
 
-
-## goormIDE --- GitHub
-```
-<!-- Commit & Push -->
-git add --all
-git commit -m "커밋 내용"
-git push -u origin "브랜치 명"
-```     
-```
-<!-- Create Branch & Check Out -->
-git branch "브랜치 명"
-git checkout "브랜치 명"
-```     
-```
-<!-- Pull from GitHub -->
-git pull origin "브랜치 명"
-```     
-```
-<!-- Remove Local Branch -->
-git branch -d "브랜치 명"
-```     
+## 서비스 사용법
+1. 사이트에서 간단하게 약속의 제목만 적으면 '초대 링크'와 '결과 링크'가 생성됩니다.
+2. 약속에 참여하는 다른 분들에게 '초대 링크'를 공유하여 참여하지 못하는 시간을 입력하도록 합니다.
+3. 모두가 참여한 후 '결과 링크'에 들어가 모두가 참여 가능한 시간을 확인합니다. (결과 링크에서 참여자 수도 확인하실 수 있습니다.)
