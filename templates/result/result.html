@@ -1,13 +1,15 @@
 {% extends 'result/base.html' %}
+{% load static %}
 {% block content %}
 <div style="text-align: center;">
     <br/><br/>
-    <div style="font-size: 5vw;">{{ title }}<br/></div>
+    <div style="font-size: 5vw;" id="title">{{ title }}<br/></div>
     <div class="desc"> 약속 가능 시간을 확인하세요!</div>
     <div style="font-size: 4.5vw;">👀 현재까지 {{ count }}명이 참여했어요.<br/></div><br/>
     <div id="result" class="result component">
         {{ content|linebreaksbr }}
     </div>
     {% include 'components/share.html' %}
+    <script src="{% static 'script/result.js' %}" type="text/javascript"></script>
 </div>
 {% endblock %}

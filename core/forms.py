@@ -8,7 +8,7 @@ class PostForm(forms.ModelForm):
         fields = ['title', 'describe']
         labels = {
             'title': '▶ 약속 제목 (50자 이내)',
-            'describe': '▶ 약속 내용 (선택)'
+            'describe': '▶ 약속 내용'
         }
         widgets = {
             'title': forms.TextInput(attrs={
