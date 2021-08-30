@@ -108,7 +108,7 @@ def submit(request):
             if fin[i] <= start[i]:
                 continue
 
-            for j in range(day + start[i] - 1, day + fin[i] + 1):
+            for j in range(day + start[i] - 1, day + fin[i]):
                 if 0 <= j < 168:
                     status[j] = 'F'
 
