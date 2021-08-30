@@ -65,7 +65,7 @@ def result(request):
                 content += '👉 {}요일 {}시 ~'.format(days[idx // 24], idx % 24)
                 edit = True
             elif last and not val:
-                content += ' {}요일 {}시\n'.format(days[idx // 24], idx % 24 + 1)
+                content += ' {}요일 {}시\n'.format(days[idx // 24], idx % 24)
                 edit = False
             last = val
 
@@ -108,7 +108,7 @@ def submit(request):
             if fin[i] <= start[i]:
                 continue
 
-            for j in range(day + start[i] - 1, day + fin[i]):
+            for j in range(day + start[i], day + fin[i]):
                 if 0 <= j < 168:
                     status[j] = 'F'
 
