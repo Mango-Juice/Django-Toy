@@ -53,7 +53,3 @@
 ![Screen Shots](https://github.com/Mango-Juice/Django-Toy/blob/main/static/images/screenshots.png?raw=true)    
 
 <br/>
-
-## 기타
-[여기](https://goor.me/ynVyW)를 클릭해 GoormIDE에서 본 프로젝트를 확인하실 수 있습니다. (읽기 전용)
-Only Korean is supported. English is not supported.
