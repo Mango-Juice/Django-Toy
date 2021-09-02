@@ -1,9 +1,15 @@
-# Django-Toy
+# Django Toy Project
+ Django를 이용하여 제작한 Toy Project입니다. 여러명의 시간 스케줄을 취합하여 약속이 가능한 시간을 추려주는 웹사이트입니다.
+ 
+ > ❗❗ **주의**    
+ > 해당 프로젝트는 단순 연습용이며, 실제 약속 시간을 정하는 용도로 사용하지 말아주세요. ([Issue #12](https://github.com/Mango-Juice/Django-Toy/issues/12) 참고)
+
+ > ✔ **안내**    
+ > 해당 사이트의 실행 링크는 https://pytoy-cxkwi.run.goorm.io 이나, 서버가 항상 켜져있지는 않습니다. 서버 오픈이 필요한 경우 [여기](https://open.kakao.com/o/sOlBFBgd)로 연락주세요.
 
 ## 약속 시간, 아직도 힘들게 정하시나요?
 https://pytoy-cxkwi.run.goorm.io 에서 링크 하나로 약속 시간을 정해보세요!
 (서버는 항상 켜져있지 않습니다.)    
-(해당 프로젝트는 단순 연습용이며, 실제 약속 시간을 정하는 용도로 사용하지 마세요 - [Issue #12](https://github.com/Mango-Juice/Django-Toy/issues/12) 참고)
 
 ## 서비스 사용법
 1. 사이트에서 간단하게 약속의 제목만 적으면 '초대 링크'와 '결과 링크'가 생성됩니다.
